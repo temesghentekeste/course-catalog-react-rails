@@ -1,9 +1,17 @@
 import React from 'react'
 import styles from './Jumbotron.module.css'
+import styled from 'styled-components'
 
+
+const Section = styled.section`
+    background-color: #d74234;
+    min-height: 550px;
+    padding: 50px 0;
+    color: #fff;
+`
 const Jumbotron = () => {
     return (
-        <section className={styles.homeSection_1}>
+        <Section className={styles.homeSection_1}>
             <div className="container">
                 <div className="row">
                     <div className="col col-sm-12 col-md-5">
@@ -30,7 +38,7 @@ const Jumbotron = () => {
                 </div>
             </div>
             
-        </section>
+        </Section>
     )
 }
 

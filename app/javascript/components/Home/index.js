@@ -16,7 +16,7 @@ class Home extends Component {
     }
     render() {
         return (
-            <div className={styles.jumbotron}>
+            <div>
                <Jumbotron/>
             </div>
         )
