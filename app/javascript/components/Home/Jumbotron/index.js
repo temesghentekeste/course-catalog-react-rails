@@ -21,6 +21,16 @@ const Header = styled.h1`
     font-size: 40px;
     line-height: 52px;
 `
+
+const Button = styled.button`
+    display: inline-block;
+    text-decoraton: none;
+    cursor: pointer;
+    border-radius: none;
+    font-weight: bold;
+    background: #fff;
+    box-shadow: 0 0 0 3px #473528, -6px 6px #ef5f17, -6px 6px 0 3px #473228;
+`
 const Jumbotron = () => {
     return (
         <Section className={styles.homeSection_1}>
@@ -30,6 +40,9 @@ const Jumbotron = () => {
                         <div className="pt-4 mt-4">
                             <Header>React For Rails Developers</Header>
                             <Subhead>Supercharge your Ruby on Rails Apps with React.js</Subhead>
+                            <div className="cta-wrapper">
+                                <Button className="btn fancy-btn">Get Started</Button>
+                            </div>
                         </div>
                     </div>
                     <div className="col col-sm-12 col-md-7">
