@@ -46,15 +46,13 @@ class Home extends Component {
 
   render() {
     return (
-      this.state.course_modules && (
-        <div>
-          <Jumbotron />
-          <Table
-            handleVideoChange={this.handleVideoChange.bind(this)}
-            course_modules={this.state.course_modules}
-          />
-        </div>
-      )
+      <div>
+        <Jumbotron />
+        <Table
+          handleVideoChange={this.handleVideoChange.bind(this)}
+          course_modules={this.state.course_modules}
+        />
+      </div>
     );
   }
 }
