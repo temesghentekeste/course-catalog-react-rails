@@ -16,7 +16,6 @@ episodes = Episode.create([
         section: section
       },
       {
-        id: 3,
         title: '3. Building a Hello World app',
         description: 'Lorem ipsum ...',
         url: 'https://www.youtube.com/embed/B0SxxHAImhc', 
