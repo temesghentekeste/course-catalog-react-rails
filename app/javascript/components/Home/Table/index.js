@@ -8,8 +8,8 @@ class Table extends Component {
   }
 
   render() {
-    const handleVideoChange = this.props.handleVideoChange;
     const items = this.props.course_modules.map((data) => {
+      const handleVideoChange = this.props.handleVideoChange.bind(this, data);
       return data.active ? (
         <ActiveItem
           key={data.id}
