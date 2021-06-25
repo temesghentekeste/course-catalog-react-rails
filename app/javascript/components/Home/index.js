@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import axios from 'axios';
 import styles from './Home.module.css';
 import Jumbotron from './Jumbotron';
 import Table from './Table';
@@ -8,33 +8,28 @@ class Home extends Component {
   constructor() {
     super();
     this.state = {
-      course_modules: [
-        {
-          id: 1,
-          title: '1. Setting up a new Ruby on Rails App with React',
-          description: 'Lorem ipsum ...',
-          active: false,
-        },
-        {
-          id: 2,
-          title: '2. Adding React to an existing Rails App',
-          description: 'Lorem ipsum ...',
-          active: false,
-        },
-        {
-          id: 3,
-          title: '3. Building a Hello World app',
-          description: 'Lorem ipsum ...',
-          active: false,
-        },
-        {
-          id: 4,
-          title: '4. Adding React Router DOM to your app',
-          description: 'Lorem ipsum ...',
-          active: false,
-        },
-      ],
+      course_modules: [],
     };
+  }
+
+  componentDidMount() {
+    axios
+      .get('/episodes.json')
+      .then((data) => {
+        let res = [];
+        data.data.data.map((data) => {
+          res.push({
+            id: data.id,
+            title: data.title,
+            description: data.description,
+            active: false,
+          });
+          this.setState({ course_modules: res });
+        });
+      })
+      .catch((error) => {
+        debugger;
+      });
   }
 
   handleVideoChange = (item, e) => {
@@ -51,13 +46,15 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <Jumbotron />
-        <Table
-          handleVideoChange={this.handleVideoChange.bind(this)}
-          course_modules={this.state.course_modules}
-        />
-      </div>
+      this.state.course_modules && (
+        <div>
+          <Jumbotron />
+          <Table
+            handleVideoChange={this.handleVideoChange.bind(this)}
+            course_modules={this.state.course_modules}
+          />
+        </div>
+      )
     );
   }
 }
