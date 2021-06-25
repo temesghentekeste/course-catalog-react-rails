@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ActiveItem from './ActiveItem';
 import Item from './Item';
 
 class Table extends Component {
@@ -8,7 +9,13 @@ class Table extends Component {
 
   render() {
     const items = this.props.course_modules.map((data) => {
-      return (
+      return data.active ? (
+        <ActiveItem
+          key={data.id}
+          title={data.title}
+          description={data.description}
+        />
+      ) : (
         <Item key={data.id} title={data.title} description={data.description} />
       );
     });
