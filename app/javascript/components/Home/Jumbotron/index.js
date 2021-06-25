@@ -24,12 +24,15 @@ const Header = styled.h1`
 
 const Button = styled.button`
     display: inline-block;
+    padding: 10px 20px;
     text-decoraton: none;
     cursor: pointer;
     border-radius: none;
     font-weight: bold;
     background: #fff;
     box-shadow: 0 0 0 3px #473528, -6px 6px #ef5f17, -6px 6px 0 3px #473228;
+    color: #888;
+    font-size: 18px;
 `
 const Jumbotron = () => {
     return (
