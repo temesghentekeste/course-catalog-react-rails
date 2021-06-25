@@ -81,7 +81,8 @@ module.exports = function(api) {
         {
           removeImport: true
         }
-      ]
+      ],
+      'react-hot-loader/babel',
     ].filter(Boolean)
   }
 }

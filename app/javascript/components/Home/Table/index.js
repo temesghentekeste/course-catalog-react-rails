@@ -9,7 +9,7 @@ class Table extends Component {
   render() {
     const items = this.props.course_modules.map((data) => {
       return (
-        <Item key={data.id} title={data.titel} description={data.description} />
+        <Item key={data.id} title={data.title} description={data.description} />
       );
     });
     return (

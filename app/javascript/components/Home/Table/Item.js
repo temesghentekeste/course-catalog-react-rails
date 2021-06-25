@@ -3,7 +3,7 @@ import Thumbnail from './Thumbnail';
 
 function Item(props) {
   return (
-    <div className="row">
+    <div className="row pt-4 pb-4">
       <div className="col-md-10 offset-md-1">
         <div className="text-ecnter">
           <div className="card px-5">

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Thumbnail = () => {
   return (
-    <div>
+    <div className="pb-4 pt-4">
       <iframe
         width="100%"
         height="100%"

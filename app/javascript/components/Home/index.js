@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import styles from './Home.module.css';
 import Jumbotron from './Jumbotron';
 import Table from './Table';
