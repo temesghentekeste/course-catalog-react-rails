@@ -25,7 +25,7 @@ class Home extends Component {
           id: 3,
           title: '3. Building a Hello World app',
           description: 'Lorem ipsum ...',
-          active: true,
+          active: false,
         },
         {
           id: 4,
