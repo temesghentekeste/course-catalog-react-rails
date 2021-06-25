@@ -4,7 +4,10 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import 'bootstrap/scss/bootstrap.scss';
+import 'bootstrap/dist/js/bootstrap'
+import 'bootstrap/dist/css/bootstrap'
+
+import '../stylesheets/application';
 
 import Home from '../components/Home';
 
