@@ -5,7 +5,7 @@ const Video = () => {
     <div className="pb-4 pt-4">
       <iframe
         width="100%"
-        height="100%"
+        height="400"
         src="https://www.youtube.com/embed/B0SxxHAImhc"
         title="YouTube video player"
         frameBorder="0"
